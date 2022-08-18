@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LibrarySystem</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <br>
+    <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+     <%if current_user%>
+              <%= button_to 'Logut', '/users/sign_out', method: :delete %> 
+             <%else%>
+             <%= button_to 'Login', '/users/sign_in', method: :get %>
+             <%= button_to 'Signup', '/users/sign_up', method: :get %>
+             <%end%>
+    <%= yield %>
+  </body>
+</html>

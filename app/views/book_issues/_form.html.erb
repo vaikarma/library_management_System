@@ -1,0 +1,35 @@
+<%= form_with(model: book_issue) do |form| %>
+
+<br>
+  <div class="field">
+    <%= form.label :bookID %>
+    <br>
+    <%= form.number_field :book_id %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :userid %>
+    <br>
+    <%= form.number_field :user_id %>
+  </div>
+<br>
+   <div class="field">
+    <%= form.label :issue_date %>
+    <br>
+    <%= form.date_field :issue_date %>
+  </div>
+
+<br>
+  <div class="field">
+    <%= form.label :return_date%>
+    <br>
+    <%= form.date_field :return_date%>
+  </div>
+
+
+
+<br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

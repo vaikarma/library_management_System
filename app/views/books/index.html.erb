@@ -1,0 +1,10 @@
+<br>
+<%@books.each do |book|%>
+<%=book.book_name%>
+<%=book.title%>
+<%=book.stoke%>
+<%=book.price%>
+<%= link_to 'edit ', edit_book_path(book) %>
+<br>
+<%end%>
+<%= link_to 'Back',  librarians_path %>

@@ -1,0 +1,14 @@
+<br>
+<h1>Name <%=@user.name%> your fine is due <%=@user.totalfine%></h1>
+  
+      <th> BOOK ID</th>
+      <th>ISSUE DATE</th>
+      <th> RETURN DATE </th>
+      <br>
+<%@book_issues.each do |b|%>
+<%=b.book_id%>
+<%=b.issue_date%>
+<%=b.return_date%>
+<br>
+<%end%>
+<%= link_to 'Back',  students_path  %>

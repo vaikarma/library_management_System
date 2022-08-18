@@ -1,0 +1,14 @@
+<br>
+<%c=0%>
+<h1>Name <%=@user.name%> your fine is due <%=@user.totalfine%></h1>
+<%@books.each do |i|%>
+<%=i.user_id%>
+<%=i.book_id%>
+<%=i.issue_date%>
+<%=i.return_date%>
+<%= link_to 'returnbook',book_issue_path(i),:method => :delete %>
+<%c=c+1%>
+<br>
+<%end%>
+<h1>total books Issued <%=c%></h1>
+<%= link_to 'Back',  librarians_path %>

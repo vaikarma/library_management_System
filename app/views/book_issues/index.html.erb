@@ -1,0 +1,15 @@
+<br>
+<h1>DashBord</h1>
+      <th>USER ID </th>
+      <th> BOOK ID</th>
+      <th>ISSUE DATE</th>
+      <th> RETURN DATE </th>
+<br>
+<%@book_issues.each do |bookissue|%>
+<%=bookissue.user_id%>
+<%=bookissue.book_id%>
+<%=bookissue.issue_date%>
+<%=bookissue.return_date%>
+<br>
+<%end%>
+<%= link_to 'Back',  librarians_path %>

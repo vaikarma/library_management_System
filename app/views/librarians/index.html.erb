@@ -1,0 +1,20 @@
+<br>
+<%= link_to 'add new book',  new_book_path %>
+<br>
+<%= link_to 'View books',  books_path %>
+<br>
+<%= link_to 'issue_book',  new_book_issue_path %>
+<br>
+<%= link_to 'Dashbord',  book_issues_path %>
+
+<h1>Search BOOK</h1>
+ <%= form_with url: "/search", method: :post do |form| %>
+            <%= form.text_field :query,placeholder:"Search"%>
+            <%= form.submit "search"%>
+            <% end %>
+<br>
+<h1>Search USER BOOK</h1>
+ <%= form_with url: "/searchuser", method: :post do |form| %>
+            <%= form.text_field :query,placeholder:"Search"%>
+            <%= form.submit "search"%>
+            <% end %>
